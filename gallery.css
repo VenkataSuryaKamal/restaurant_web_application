@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Handjet:wght@200&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Handjet', cursive;
+    box-sizing: border-box;
+}
+.banner{
+    width: 100%;
+    height: 170vh;
+    background-color: black;
+    background-position: center;
+    background-size: center;
+}
+.navbar
+{
+    width: 90%;
+    padding: 30px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: -10%;
+
+}
+.logo
+{
+    width: 30%;
+    cursor: pointer;
+}
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 20px;
+    position: relative;
+
+}
+.navbar ul li::after{
+    content: '';
+    height: 3px;
+    width: 0%;
+    background-color: #ff0000;
+    position: absolute;
+    left: 15px;
+    bottom: -10px;
+    
+}
+.navbar ul li:hover::after{
+    width: 40%;
+    
+}
+.navbar ul li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 600;
+    padding: 15px;
+
+}
+/*video gallery*/
+.section-header{
+    margin-top: -60%;
+    color: #fff;
+    text-align: center;
+    font-size: 48px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .5rem;
+    margin-bottom: 15px;
+
+
+}
+.section-header span{
+    color: palegreen;
+}
+.underline{
+    border: 1px solid #fff;
+    width: 10rem;
+    margin: 0 auto;
+    align-items: center;
+    margin-bottom: 30px;
+
+}
+.video-gallery{
+    height: 100%;
+    max-width: 100%;
+    display: grid;
+    position: absolute;
+    grid-template-columns: 320px 320px 320px;
+    align-content: space-evenly;
+    gap: 5rem;
+    margin-left: 8%;
+    padding: 10px;
+}
+.video-gallery .gallery-item{
+position:relative;
+float: left;
+overflow: hidden;
+background: #000;
+min-width: 320px;
+max-width: 580px;
+max-height: 360px;
+width: 48%;
+margin: 0px 1%;
+border-radius: 1.5rem;
+cursor: pointer;
+
+
+}
+.video-gallery .gallery-item img{
+    width:105%;
+    height: 300px;
+    display: block;
+    position: relative;
+    opacity: 0.7;
+    transition: opacisty 0.20s, transform 0.35s;
+    transform: translate3d(-23px,0px,0px);
+    backface-visibility: hidden;
+    border-radius:1.5rem ;
+
+}
+.video-gallery .gallery-item:hover img{
+    opacity: .5;
+    transform: translate3d(0px,0px,0px);
+
+}
+.gallery-item-caption{
+    color: #fff;
+    padding: 2em;
+    text-transform: uppercase;
+    font-size: 1.25em;
+    text-align: left;
+
+}
+.gallery-item-caption,.gallery-item-caption a{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+}
+.video-gallery .gallery-item h2{
+    font-weight: 600;
+    overflow: hidden;
+    padding: 0.5em 0;
+
+}
+.video-gallery .gallery-item p{
+    font-weight: 500;
+    letter-spacing: 1px;
+    font-size: 68%;
+    padding: 1em 0;
+    opacity: 0;
+    transition: opacity 0.35s, transform 0.35s;
+    transform: translate3d(10%,0px,0px);
+}
+.video-gallery .gallery-item h2::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 15%;
+    height: 1px;
+    background: #fff;
+    transition: transform 0.3s;
+    transform: translate3d(-100%,0px,0px);
+
+}
+.video-gallery .gallery-item:hover h2::after{
+    transform: translate3d(0px , 0px, 0px);
+
+}
+.video-gallery .gallery-item h2,
+.video-gallery .gallery-item p{
+    position: relative;
+    margin: 0;
+    z-index: 10;
+
+}
+.video-gallery .gallery-item:hover p{
+    opacity: 1;
+    transform: translate3d(0px, 0px 0px);
+
+}
